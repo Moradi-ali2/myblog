@@ -50,7 +50,7 @@
 <body>
     <main role="main" class="container">
         <div class="row">
-          <div class="col-md-8">
+          <div class="col-md-9">
             {% if messages %}
               {% for message in messages %}
                <div class="alert alert-{{ message.tags }}">
@@ -62,13 +62,13 @@
             
             {% block content %}{% endblock %}
           </div>
-          <div class="col-md-4">
+          <div class="col-md-3">
             <div class="content-section">
-              <h3>نوار همیار</h3>
+              <h3>نوار کمکی</h3>
               <p class='text-muted'>هر اطلاعاتی می‌توانید در اینجا قرار دهید.
                 <ul class="list-group">
-                  <li class="list-group-item list-group-item-light">آخرین پستها</li>
-                  <li class="list-group-item list-group-item-light">اعلامیه‌ها</li>
+                  <li class="list-group-item list-group-item-light"><a href="{% url 'blog-home' %}">خانه</a></li>
+                  <li class="list-group-item list-group-item-light"> <a href="{% url 'post-create' %}">ایجاد پست جدید</a> </li>
                   <li class="list-group-item list-group-item-light">تقویم</li>
                   <li class="list-group-item list-group-item-light">و دیگر هیچ</li>
                 </ul>
